@@ -6,6 +6,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.testng.Assert;
 import pages.actions.CarSearchPageActions;
 import pages.actions.CarsGuideHomePageActions;
 import utils.SeleniumDriver;
@@ -61,13 +62,12 @@ public class SearchCarSteps {
 
     @Then("^I should see list of searched cars$")
     public void i_should_see_list_of_searched_cars()  {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+       System.out.println("Car list found");
     }
 
     @And("^the page title should be \"([^\"]*)\"$")
-    public void the_page_title_should_be(String arg1)  {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+    public void the_page_title_should_be(String expectedTitle)  {
+        String actual_Title = SeleniumDriver.getDriver().getTitle();
+        Assert.assertEquals(actual_Title,expectedTitle);
     }
 }

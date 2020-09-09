@@ -7,7 +7,7 @@ import utils.SeleniumDriver;
 
 public class CarsGuideHomePageActions {
 
-    CarsGuideHomePageLocators carsGuideHomePageLocators=null;
+    CarsGuideHomePageLocators carsGuideHomePageLocators = null;
 
     public CarsGuideHomePageActions () {
 

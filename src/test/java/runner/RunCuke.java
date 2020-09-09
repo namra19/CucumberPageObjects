@@ -14,8 +14,7 @@ import java.util.Map;
 @CucumberOptions(
         plugin = {"json:target/RunCuke/cucumber.json","pretty", "html:target/RunCuke/cucumber.html", "com.cucumber.listener.ExtentCucumberFormatter"},
         features = "src/test/resources/features",
-        glue = "steps",
-        tags = {"@Search-Cars"}
+        glue = "steps"
 )
 
 public class RunCuke extends AbstractTestNGCucumberTests {
